@@ -15,18 +15,24 @@
   <time><%= post.created_at.to_date.strftime("%d %B, %Y") %></time>
 
    </small>
+</p>
+
+
+    <p><%= image_tag post.image,class: 'img-thumbnail ' if post.image? %></p>
+
+    
+
   <br>
   <br>
+  <p>
+   <%= post.summary %>
 
   <p>
-    <strong>Summary:</strong>
-    <%= post.summary %>
+   
+   <%= post.body %>
   </p>
 
-  <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
+  
 
    </div>
   </div>
