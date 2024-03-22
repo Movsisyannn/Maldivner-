@@ -11,6 +11,21 @@
   </head>
 
   <body>
+
+
+    <div class="container">
+  
+   <% flash.each do |name, message| %>
+      <div class="alert alert-warning" role="alert">
+  
+        <%= message %>
+     </div>
+      <% end %>
+      
+   <%= render 'posts/header' %>
+    
+
     <%= yield %>
+    </div>
   </body>
 </html>

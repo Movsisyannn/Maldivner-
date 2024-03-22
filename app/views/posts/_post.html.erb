@@ -1,8 +1,22 @@
-<div id="<%= dom_id post %>">
+
+
+<div class="card-panel shadow p-5 rounded-5 mb-2 ">
+
+
+     <div class="alert alert-light">
+
+   <div id="<%= dom_id post %>">
   <p>
-    <strong>Title:</strong>
-    <%= post.title %>
+ 
+    <h5><strong><%= post.title %></strong></h5>
   </p>
+
+  <small>
+  <time><%= post.created_at.to_date.strftime("%d %B, %Y") %></time>
+
+   </small>
+  <br>
+  <br>
 
   <p>
     <strong>Summary:</strong>
@@ -14,4 +28,6 @@
     <%= post.body %>
   </p>
 
+   </div>
+  </div>
 </div>
