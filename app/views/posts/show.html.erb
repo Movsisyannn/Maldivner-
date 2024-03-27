@@ -8,6 +8,45 @@
 <%= render @post %>
 
 
+<hr>
+
+<h3 class="mt-5"><strong> Comments</strong></h3>
+
+             <% @post.comments.each do |comment| %>
+
+         <div class="alert alert-primary" role="alert">
+  
+        <p><strong><%= comment.username %></strong>: <%= comment.body %><br>
+
+     </p>
+
+    </div>
+
+ <% end %>  
+
+ <hr><br>
+
+ <h3><strong>Insert Comment</strong></h3>
+
+ <%= form_for([@post,@post.comments.build]) do |f| %>
+ <p>
+  Username<br>
+  <%= f.text_field(:username, {:class => 'form-control'})%>
+ </p>
+
+  <p>
+  Text Comments<br>
+  <%= f.text_area(:body,{:class => 'form-control'})%>
+ </p>
+
+  <p>
+ 
+  <%= f.submit("Insert Comments",{:class => 'btn btn-primary'})%>
+
+
+ </p>
+ <% end %>  
+
 
 
 
