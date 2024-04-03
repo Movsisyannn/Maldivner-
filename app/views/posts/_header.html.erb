@@ -12,6 +12,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+
+
+
+
+
+           
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<%= about_path %>">Contact</a>
+        </li>
+
          </ul>
 
          <ul class="navbar-nav mr-auto">
@@ -22,20 +32,19 @@
           <%= link_to "Sign Out",destroy_user_session_path,method: :delete,class: "nav-link" %>
           
         </li>
+        |
 
         <li class="nav-item">
           <%= link_to "Edit Profile",edit_user_registration_path,class: "nav-link" %>
           
         </li>
+        |
 
-       
-
-
-
-           <li class="nav-item">
+        <li class="nav-item">
           <%= link_to "Sign In", new_user_session_path,class: "nav-link" %>
           
         </li>
+        |
 
          <li class="nav-item">
           <%= link_to "Sign Up",new_user_registration_path,class: "nav-link" %>

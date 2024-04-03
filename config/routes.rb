@@ -2,6 +2,7 @@ Rails.application.routes.draw do
  devise_for :users
 
   root "posts#index"
+  get 'about' => 'contact#about', as: 'about'
   resources :posts do
     resources :comments
      resources :users 
