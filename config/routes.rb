@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
- devise_for :users
+   resources :tourists
+   devise_for :users
 
   root "posts#index"
   get 'about' => 'contact#about', as: 'about'

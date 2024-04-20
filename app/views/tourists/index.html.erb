@@ -1,0 +1,54 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tourists List</h1>
+
+ <table class="table table-striped table-hover  table-bordered">
+    <thead class="table-secondary">
+      <tr>
+        <th>First name</th>
+         <th>Last name</th>
+          <th>Email</th>
+           <th>Phone</th>
+            <th>Twitter</th>
+             <th colspan="3"></th>
+
+
+
+
+      </tr>
+       </thead> 
+
+
+<tbody>
+  <% @tourists.each do |tourist| %>
+  
+  
+   <tr>
+
+   <td><%= tourist.first_name %></td>
+    <td><%= tourist.last_name %></td> 
+     <td><%= tourist.email %></td>
+      <td><%= tourist.phone %></td>
+       <td><%= tourist.twitter %></td>
+
+        <td><%= link_to 'show',tourist, class: "btn btn-outline-secondary btn-sm" %></td>
+   
+
+          <td><%= link_to 'Edit',edit_tourist_path(tourist), class: "btn btn-outline-info btn-sm" %></td>
+
+
+
+             <td><%= link_to 'Delete',tourist, method: :delete,
+               data: {confirm: 'Are you sure?'}, class: "btn btn-outline-danger btn-sm" %></td>
+      
+
+ 
+  </tr>
+  <% end %>
+
+      </tbody>
+    </table>  
+
+       <%= link_to "New tourist", new_tourist_path %>
+       /
+       <%= link_to "Show this tourist", @tourist %>
