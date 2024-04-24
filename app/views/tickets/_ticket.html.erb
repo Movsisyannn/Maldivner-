@@ -1,0 +1,29 @@
+<div id="<%= dom_id ticket %>">
+  <div class="card-panel shadow p-5 rounded-5 mb-2 ">
+
+
+     <div class="alert alert-light">
+  <p>
+    <strong>Name:</strong>
+    <%= ticket.name %>
+  </p>
+
+  <p>
+    <strong>Discription:</strong>
+    <%= ticket.discription %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+     <%= number_to_currency (ticket.price/100) %>
+   
+  </p>
+
+  <p>
+    <strong>Datatime:</strong>
+    <%= ticket.datatime %>
+  </p>
+</div>
+</div>
+
+</div>

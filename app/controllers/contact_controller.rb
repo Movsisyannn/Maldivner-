@@ -12,6 +12,19 @@ class ContactController < ApplicationController
 		    or get a taste of local life (and some of the islands’ freshest seafood) at the Fish Market in Malé. 
 		    It doesn’t stop there—we’ve got more hidden gems and must-do’s below.'
 
-		    @verjaban = ''
+		          
+
+
+		    @verjaban = 'Instagram: @gregsideris /
+
+Facebook: gregorsideris  /
+
+Facebook: theviennablog  /
+
+Twitter: @gregorsideris  /
+
+Twitter:@theviennablog  /
+
+Contact: gregor.sideris@gmail.com'
 		end
 	end
